@@ -9,7 +9,7 @@ let players: [[String: Any]] = []
 
 /* Complete info of all 18 players in seperate Dictionary */
 
-let player1: [String: Any] = ["name" : "Joe Smith", "Height" : 42, "isExperienced" : true, "guardians" : "Jim and Jan Smith"]
+let player1: [String: Any] = ["name" : "Joe Smith", "height" : 42, "isExperienced" : true, "guardians" : "Jim and Jan Smith"]
 
 let player2: [String: Any] = ["name": "Jill Tanner", "height": 36, "isExperienced": true, "guardians": "Clara Tanner"]
 
