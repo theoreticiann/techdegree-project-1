@@ -86,5 +86,31 @@ var theSoccerLeague = [teamDragon, teamRaptors, teamSharks]
 var totalPlayersPerTeam = (players.count / theSoccerLeague.count)
 
 
+// Logic to sort and store experienced players
+
+var expPlayerPerTeam = (experiencedPlayers.count / theSoccerLeague.count)
+
+for player in experiencedPlayers {
+    if teamDragon.count < teamSharks.count {
+        teamDragon.append(player)
+    } else if teamSharks.count < teamRaptors.count {
+        teamSharks.append(player)
+    } else {
+        teamRaptors.append(player)
+    }
+}
 
 
+// Login to sort and store not experienced players
+
+var notExpPlayersPerTeam = (notexperiencedPlayers.count / theSoccerLeague.count)
+
+for player in notexperiencedPlayers {
+    if teamDragon.count < teamSharks.count {
+        teamDragon.append(player)
+    } else if teamSharks.count < teamRaptors.count {
+        teamSharks.append(player)
+    } else {
+        teamRaptors.append(player)
+    }
+}
