@@ -9,41 +9,41 @@ let players: [[String: Any]] = []
 
 /* Complete info of all 18 players in seperate Dictionary */
 
-let player1: [String: Any] = ["Name" : "Joe Smith", "Height" : 42, "isExperienced" : true, "Guardians" : "Jim and Jan Smith"]
+let player1: [String: Any] = ["name" : "Joe Smith", "Height" : 42, "isExperienced" : true, "guardians" : "Jim and Jan Smith"]
 
-let player2: [String: Any] = ["Name": "Jill Tanner", "Height": 36, "isExperienced": true, "Guardians": "Clara Tanner"]
+let player2: [String: Any] = ["name": "Jill Tanner", "height": 36, "isExperienced": true, "guardians": "Clara Tanner"]
 
-let player3: [String: Any] = ["Name": "Bill Bon", "Height": 43, "isExperienced": true, "Guardians": "Sara and Jenny Bon"]
+let player3: [String: Any] = ["name": "Bill Bon", "height": 43, "isExperienced": true, "guardians": "Sara and Jenny Bon"]
 
-let player4: [String: Any] = ["Name": "Eva Gordon","Height": 45, "isExperienced": false, "Guardians": "Wendy and Mike Gordon"]
+let player4: [String: Any] = ["name": "Eva Gordon","height": 45, "isExperienced": false, "guardians": "Wendy and Mike Gordon"]
 
-let player5: [String: Any] = ["Name":"Matt Gill", "Heihgt": 40, "isExperienced": false, "Guardians": "Charles and Sylvia Gill"]
+let player5: [String: Any] = ["name":"Matt Gill", "height": 40, "isExperienced": false, "guardians": "Charles and Sylvia Gill"]
 
-let player6: [String: Any] = ["Name":"Kimmy Stein", "Heihgt": 41, "isExperienced": false, "Guardians": "Bill and Hillary Stein"]
+let player6: [String: Any] = ["name":"Kimmy Stein", "height": 41, "isExperienced": false, "guardians": "Bill and Hillary Stein"]
 
-let player7: [String: Any] = ["Name":"Sammy Adams", "Heihgt": 45, "isExperienced": false, "Guardians": "Jeff Adams"]
+let player7: [String: Any] = ["name":"Sammy Adams", "height": 45, "isExperienced": false, "guardians": "Jeff Adams"]
 
-let player8: [String: Any] = ["Name":"Karl Saygan", "Heihgt": 42, "isExperienced": true, "Guardians": "Heather Bledsoe"]
+let player8: [String: Any] = ["name":"Karl Saygan", "height": 42, "isExperienced": true, "guardians": "Heather Bledsoe"]
 
-let player9: [String: Any] = ["Name":"Suzane Greenberg", "Heihgt": 44, "isExperienced": true, "Guardians": "Henrietta Dumas"]
+let player9: [String: Any] = ["name":"Suzane Greenberg", "height": 44, "isExperienced": true, "guardians": "Henrietta Dumas"]
 
-let player10: [String: Any] = ["Name":"Sal Dali", "Heihgt": 41, "isExperienced": false, "Guardians": "Gala Dali"]
+let player10: [String: Any] = ["name":"Sal Dali", "height": 41, "isExperienced": false, "guardians": "Gala Dali"]
 
-let player11: [String: Any] = ["Name":"Joe Kavalier", "Heihgt": 39, "isExperienced": false, "Guardians": "Sam and Elaine Kavalier"]
+let player11: [String: Any] = ["name":"Joe Kavalier", "height": 39, "isExperienced": false, "guardians": "Sam and Elaine Kavalier"]
 
-let player12: [String: Any] = ["Name":"Ben Finkelstein", "Heihgt" : 44, "isExperienced": false, "Guardians": "Aaron and Jill Finkelstein"]
+let player12: [String: Any] = ["name":"Ben Finkelstein", "height" : 44, "isExperienced": false, "guardians": "Aaron and Jill Finkelstein"]
 
-let player13: [String: Any] = ["Name":"Diego Soto", "Heihgt": 41, "isExperienced": true, "Guardians": "Robin and Sarika Soto"]
+let player13: [String: Any] = ["name":"Diego Soto", "height": 41, "isExperienced": true, "guardians": "Robin and Sarika Soto"]
 
-let player14: [String: Any] = ["Name":"Chloe Alaska", "Heihgt": 47, "isExperienced": false, "Guardians": "David and Jamie Alaska"]
+let player14: [String: Any] = ["name":"Chloe Alaska", "height": 47, "isExperienced": false, "guardians": "David and Jamie Alaska"]
 
-let player15: [String: Any] = ["Name":"Arnold Willis", "Heihgt": 43, "isExperienced": false, "Guardians": "Claire Willis"]
+let player15: [String: Any] = ["name":"Arnold Willis", "height": 43, "isExperienced": false, "guardians": "Claire Willis"]
 
-let player16: [String: Any] = ["Name":"Phillip Helm", "Heihgt": 44, "isExperienced": true, "Guardians": "Thomas Helm and Eva Jones"]
+let player16: [String: Any] = ["name":"Phillip Helm", "height": 44, "isExperienced": true, "guardians": "Thomas Helm and Eva Jones"]
 
-let player17: [String: Any] = ["Name":"Les Clay", "Heihgt": 42, "isExperienced": true, "Guardians": "Wynonna Brown"]
+let player17: [String: Any] = ["name":"Les Clay", "height": 42, "isExperienced": true, "guardians": "Wynonna Brown"]
 
-let player18: [String: Any] = ["Name":"Herschel Krustofski", "Heihgt": 45, "isExperienced": true, "Guardians": "Hyman and Rachel Krustofski"]
+let player18: [String: Any] = ["name":"Herschel Krustofski", "height": 45, "isExperienced": true, "guardians": "Hyman and Rachel Krustofski"]
 
 
 
@@ -120,9 +120,9 @@ let teamRaptorsPractice = ("March 18, 1pm")
 
 // Creating a team name for personalized letter to guardians
 
-var dragonsTeamName = "Dragons"
-var sharksTeamName = "Sharks"
-var raptorsTeamName = "Raptors"
+var dragonsTeamname = "Dragons"
+var sharksTeamname = "Sharks"
+var raptorsTeamname = "Raptors"
 
 
 // empty array to store letter
@@ -133,8 +133,8 @@ var letters: [String] = []
 // Personalized letter to team dragons
 
 for player in teamDragons {
-    if let guardiansName = player["Guardians"] as? String, let playerName = player["Name"] as? String {
-        let leagueLetter = "Dear \(guardiansName), This is to let you know that your son \(playerName) is selected for school football team and he will be playing for Team \(dragonsTeamName). First team practice will starts at \(teamDragonsPractice). Thanks"
+    if let guardiansname = player["guardians"] as? String, let playername = player["name"] as? String {
+        let leagueLetter = "Dear \(guardiansname), This is to let you know that your son \(playername) is selected for school football team and he will be playing for Team \(dragonsTeamname). First team practice will starts at \(teamDragonsPractice). Thanks"
         letters.append(leagueLetter)
     }
 }
@@ -143,8 +143,8 @@ for player in teamDragons {
 // Personalized letter to team Sharks
 
 for player in teamSharks {
-    if let guardiansName = player["Guardians"] as? String, let playerName = player["Name"] as? String {
-        let leagueLetter = "Dear \(guardiansName), This is to let you know that your son \(playerName) is selected for school football team and he will be playing for Team \(dragonsTeamName). First team practice will starts at \(teamDragonsPractice). Thanks"
+    if let guardiansname = player["guardians"] as? String, let playername = player["name"] as? String {
+        let leagueLetter = "Dear \(guardiansname), This is to let you know that your son \(playername) is selected for school football team and he will be playing for Team \(dragonsTeamname). First team practice will starts at \(teamDragonsPractice). Thanks"
         letters.append(leagueLetter)
     }
 }
@@ -153,8 +153,8 @@ for player in teamSharks {
 // personalized letter to team Raptors
 
 for player in teamRaptors {
-    if let guardiansName = player["Guardians"] as? String, let playerName = player["Name"] as? String {
-        let leagueLetter = "Dear \(guardiansName), This is to let you know that your son \(playerName) is selected for school football team and he will be playing for Team \(dragonsTeamName). First team practice will starts at \(teamDragonsPractice). Thanks"
+    if let guardiansname = player["guardians"] as? String, let playername = player["name"] as? String {
+        let leagueLetter = "Dear \(guardiansname), This is to let you know that your son \(playername) is selected for school football team and he will be playing for Team \(dragonsTeamname). First team practice will starts at \(teamDragonsPractice). Thanks"
         letters.append(leagueLetter)
     }
 }
