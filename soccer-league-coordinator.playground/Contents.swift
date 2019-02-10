@@ -1,13 +1,13 @@
-/* Players Data
+/* PLAYERS DATA
  ========================
  */
 
 
-/* empty array to hold the info of all players */
+/* Empty array to hold the info of all players */
 let player: [[String: Any]] = []
 
 
-/* info of all 18 players in seperate Dictionary */
+/* Complete info of all 18 players in seperate Dictionary */
 
 let player1: [String: Any] = ["Name" : "Joe Smith", "Height" : 42, "Experience" : true, "Guardians" : "Jim and Jan Smith"]
 
@@ -71,14 +71,14 @@ for player in players {
 
 // empty collections to store team names.
 
-var teamDragon: [[String:Any]] = []
+var teamDragons: [[String:Any]] = []
 var teamSharks: [[String:Any]] = []
 var teamRaptors: [[String:Any]] = []
 
 
 // Total number of team in this league
 
-var theSoccerLeague = [teamDragon, teamRaptors, teamSharks]
+var theSoccerLeague = [teamDragons, teamRaptors, teamSharks]
 
 
 // No.of players in each team.
@@ -91,8 +91,8 @@ var totalPlayersPerTeam = (players.count / theSoccerLeague.count)
 var expPlayerPerTeam = (experiencedPlayers.count / theSoccerLeague.count)
 
 for player in experiencedPlayers {
-    if teamDragon.count < teamSharks.count {
-        teamDragon.append(player)
+    if teamDragons.count < teamSharks.count {
+        teamDragons.append(player)
     } else if teamSharks.count < teamRaptors.count {
         teamSharks.append(player)
     } else {
@@ -106,11 +106,70 @@ for player in experiencedPlayers {
 var notExpPlayersPerTeam = (notexperiencedPlayers.count / theSoccerLeague.count)
 
 for player in notexperiencedPlayers {
-    if teamDragon.count < teamSharks.count {
-        teamDragon.append(player)
+    if teamDragons.count < teamSharks.count {
+        teamDragons.append(player)
     } else if teamSharks.count < teamRaptors.count {
         teamSharks.append(player)
     } else {
         teamRaptors.append(player)
     }
+}
+
+
+/* PERSONALIZED LETTER TO PARENTS
+==================================
+ */
+
+// Team practice time and dates
+
+let teamDragonsPractice = ("March 17, 1pm")
+let teamSharksPractice = ("March 17, 3pm")
+let teamRaptorsPractice = ("March 18, 1pm")
+
+
+// Creating a team name for personalized letter to guardians
+
+var dragonsTeamName = "Dragons"
+var sharksTeamName = "Sharks"
+var raptorsTeamName = "Raptors"
+
+
+// empty array to store letter
+
+var letters: [String] = []
+
+
+// Personalized letter to team dragons
+
+for player in teamDragons {
+    if let guardiansName = player["Guardians"] as? String, let playerName = player["Name"] as? String {
+        let leagueLetter = "Dear \(guardiansName), This is to let you know that your son \(playerName) is selected for school football team and he will be playing for Team \(dragonsTeamName). First team practice will starts at \(teamDragonsPractice). Thanks"
+        letters.append(leagueLetter)
+    }
+}
+
+
+// Personalized letter to team Sharks
+
+for player in teamSharks {
+    if let guardiansName = player["Guardians"] as? String, let playerName = player["Name"] as? String {
+        let leagueLetter = "Dear \(guardiansName), This is to let you know that your son \(playerName) is selected for school football team and he will be playing for Team \(dragonsTeamName). First team practice will starts at \(teamDragonsPractice). Thanks"
+        letters.append(leagueLetter)
+    }
+}
+
+
+// personalized letter to team Raptors
+
+for player in teamRaptors {
+    if let guardiansName = player["Guardians"] as? String, let playerName = player["Name"] as? String {
+        let leagueLetter = "Dear \(guardiansName), This is to let you know that your son \(playerName) is selected for school football team and he will be playing for Team \(dragonsTeamName). First team practice will starts at \(teamDragonsPractice). Thanks"
+        letters.append(leagueLetter)
+    }
+}
+
+// Print the letters to guardians
+
+for letter in letters {
+    print(letter)
 }
