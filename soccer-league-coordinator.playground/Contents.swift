@@ -1,8 +1,3 @@
-import UIKit
-
-var str = "Hello, playground"
-
-
 /* Players Data
  ========================
  */
@@ -56,15 +51,40 @@ let player18: [String: Any] = ["Name":"Herschel Krustofski", "Heihgt": 45, "Expe
 
 var players = [player1, player2, player3, player4, player5,player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18]
 
+
 // empty collection to store expereince players and notexperiences players.
 
 var experiencedPlayers: [[String:Any]] = []
 var notexperiencedPlayers: [[String:Any]] = []
+
+
+// Logic to store experienced players and not experienced players
+for player in players {
+    if let someExperienced = player["Experience"] as? Bool {
+        if someExperienced == true {
+            experiencedPlayers.append(player)
+        } else {
+            notexperiencedPlayers.append(player)
+        }
+    }
+}
 
 // empty collections to store team names.
 
 var teamDragon: [[String:Any]] = []
 var teamSharks: [[String:Any]] = []
 var teamRaptors: [[String:Any]] = []
+
+
+// Total number of team in this league
+
+var theSoccerLeague = [teamDragon, teamRaptors, teamSharks]
+
+
+// No.of players in each team.
+
+var totalPlayersPerTeam = (players.count / theSoccerLeague.count)
+
+
 
 
