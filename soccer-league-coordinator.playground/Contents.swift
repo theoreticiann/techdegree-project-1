@@ -4,7 +4,7 @@
 
 
 /* Empty array to hold the info of all players */
-let player: [[String: Any]] = []
+let players: [[String: Any]] = []
 
 
 /* Complete info of all 18 players in seperate Dictionary */
